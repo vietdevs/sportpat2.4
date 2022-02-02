@@ -1,0 +1,124 @@
+{
+    "name": "magento/project-community-edition",
+    "description": "eCommerce Platform for Growth (Community Edition)",
+    "type": "project",
+    "version": "2.2.11",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "magento/product-community-edition": "2.2.11",
+        "composer/composer": "@alpha",
+        "imaginaerum/magento2-language-fr-fr": "*",
+        "phpoffice/phpexcel": "^1.8",
+        "mongodb/mongodb": "^1.4",
+        "lightspeedhq/ls-retail-guzzle": "~1.0",
+        "aune-io/magento2-product-grid-category-filter": "^1.1",
+        "elasticsearch/elasticsearch": "~5.1",
+        "catfan/medoo": "^1.6",
+        "google/cloud-translate": "^1.2",
+        "amasty/module-multi-warehouse-inventory": "^1.5",
+        "mageplaza/module-core": "^1.4",
+        "mageplaza/module-smtp": "^1.2.10",
+        "integer-net/magento2-session-unblocker": "^0.1.4",
+        "cloudflare/cloudflare-magento": "^1.1",
+        "veriteworks/cookiefix": "^1.0",
+        "algolia/algoliasearch-magento-2": "^2.0.3",
+        "algolia/algoliasearch-custom-algolia-magento-2": "^1.0",
+        "amasty/module-page-speed-optimizer": "^1.8",
+        "mirasvit/module-indexer": "*",
+        "mirasvit/module-cache-warmer": "^1.0",
+        "amasty/module-single-step-checkout": "^3.0",
+"amasty/mostviewed":"2.8.7",
+        "fooman/pdfcustomiser-m2": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.2.0",
+        "squizlabs/php_codesniffer": "3.0.1",
+        "phpmd/phpmd": "@stable",
+        "pdepend/pdepend": "2.5.0",
+        "friendsofphp/php-cs-fixer": "~2.1.1",
+        "lusitanian/oauth": "~0.8.10",
+        "sebastian/phpcpd": "2.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "setup/src/Magento/Setup/",
+            "Magento\\": "app/code/Magento/"
+        },
+        "psr-0": {
+            "": [
+                "app/code/"
+            ]
+        },
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "**/Test/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
+            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        "amasty": {
+            "type": "composer",
+            "url": "https://composer.amasty.com/community/"
+        },
+        "mirasvit-ssu2": {
+            "type": "composer",
+            "url": "https://27905:E56N1HBF39@packages.mirasvit.com/"
+        },
+        "mirasvit-fpc2": {
+            "type": "composer",
+            "url": "https://30428:A8IPGFHV3Q@packages.mirasvit.com/"
+        },
+        "mirasvit-esu2": {
+            "type": "composer",
+            "url": "https://30652:YSZA2TNKBM@packages.mirasvit.com/"
+        },
+        "mirasvit-frd2": {
+            "type": "composer",
+            "url": "https://34259:REYC3ZFTOK@packages.mirasvit.com/"
+        },
+        "mirasvit-far2": {
+            "type": "composer",
+            "url": "https://35548:WOV6NGF5AZ@packages.mirasvit.com/"
+        },
+        "mirasvit-tes2": {
+            "type": "composer",
+            "url": "https://40262:IQBPGAU205@packages.mirasvit.com/"
+        },
+        "magento-baler": {
+            "type": "vcs",
+            "url": "git@github.com:magento/m2-baler.git"
+        },
+        "fooman": {
+            "type": "composer",
+            "url": "https://customer-repos.fooman.co.nz/www.sportpat.com-e4257f97584ce5864e10ed6473a8210027b0df82"
+        },
+        "mageplaza": {
+            "type": "composer",
+            "url": "https://repo.mageplaza.com"
+        }
+    },
+    "extra": {
+        "magento-force": "override"
+    }
+}

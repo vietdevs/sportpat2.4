@@ -1,0 +1,119 @@
+{
+    "name": "magento/project-community-edition",
+    "description": "eCommerce Platform for Growth (Community Edition)",
+    "type": "project",
+    "version": "2.2.5",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "magento/product-community-edition": "2.2.5",
+        "composer/composer": "@alpha",
+        "Imaginaerum/magento2-language-fr-fr": "*",
+        "phpoffice/phpexcel": "^1.8",
+        "mirasvit/module-search-ultimate": "^1.1",
+        "mirasvit/module-cache-warmer": "^1.0",
+        "mirasvit/module-search-elastic-ultimate": "^1.0",
+        "mirasvit/module-fraud-check": "*",
+        "mongodb/mongodb": "^1.3",
+        "lightspeedhq/ls-retail-guzzle": "~1.0",
+        "amasty/module-single-step-checkout": "^1.8",
+        "justbetter/magento2-image-optimizer": "^1.1",
+        "mirasvit/module-indexer": "*",
+        "aune-io/magento2-product-grid-category-filter": "^1.1",
+        "liquid/liquid": "~1.4",
+        "mirasvit/module-email": "*",
+        "zero1limited/magento2-patches": "^1.0",
+        "cweagans/composer-patches": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.2.0",
+        "squizlabs/php_codesniffer": "3.0.1",
+        "phpmd/phpmd": "@stable",
+        "pdepend/pdepend": "2.5.0",
+        "friendsofphp/php-cs-fixer": "~2.1.1",
+        "lusitanian/oauth": "~0.8.10",
+        "sebastian/phpcpd": "2.0.4",
+        "smile/module-debug-toolbar": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "setup/src/Magento/Setup/",
+            "Magento\\": "app/code/Magento/"
+        },
+        "psr-0": {
+            "": [
+                "app/code/"
+            ]
+        },
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "**/Test/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
+            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
+        }
+    },
+    "minimum-stability": "alpha",
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        "mirasvit-ssu2": {
+            "type": "composer",
+            "url": "https://27905:E56N1HBF39@packages.mirasvit.com/"
+        },
+        "mirasvit-fpc2": {
+            "type": "composer",
+            "url": "https://30428:A8IPGFHV3Q@packages.mirasvit.com/"
+        },
+        "mirasvit-esu2": {
+            "type": "composer",
+            "url": "https://30652:YSZA2TNKBM@packages.mirasvit.com/"
+        },
+        "mirasvit-frd2": {
+            "type": "composer",
+            "url": "https://34259:REYC3ZFTOK@packages.mirasvit.com/"
+        },
+        "ced": {
+            "type": "git",
+            "url": "https://github.com/cedcommerce/Magento2-Developer-Debug-Tool"
+        },
+        "amasty": {
+            "type": "composer",
+            "url": "https://composer.amasty.com/community/"
+        },
+        "mirasvit-far2": {
+            "type": "composer",
+            "url": "https://35548:WOV6NGF5AZ@packages.mirasvit.com/"
+        },
+        "mirasvit-tes2": {
+            "type": "composer",
+            "url": "https://40262:IQBPGAU205@packages.mirasvit.com/"
+        }
+    },
+    "extra": {
+        "magento-force": "override",
+        "patches": {
+            "magento/framework": {
+                "PRODSECBUG-2198 - Added via Zero1_Patches": "https://raw.githubusercontent.com/zero1limited/magento2-patches/master/patches/PRODSECBUG-2198-2.2-CE.composer-2019-03-27-06-12-19/magento_framework.patch"
+            },
+            "magento/module-catalog": {
+                "PRODSECBUG-2198 - Added via Zero1_Patches": "https://raw.githubusercontent.com/zero1limited/magento2-patches/master/patches/PRODSECBUG-2198-2.2-CE.composer-2019-03-27-06-12-19/magento_module-catalog.patch"
+            }
+        }
+    }
+}
